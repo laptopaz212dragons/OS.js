@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+<body style="background-color:lightgrey;">
+
+
+  <div id="cac" style="width:94%;background-color:white; text-align:right; padding:6px;margin-top:0px; position:absolute; top:0%; left:0%;">0</div>
+<button onclick="myFunction()" style="position:absolute; top:83%; left:85%; padding:10px;">=</button>
+<button onclick="plus(this)" style="position:absolute; top:68%; left:85%; padding:10px;">+</button>
+  <button onclick="plus(this)" style="position:absolute; top:56%; left:85.5%; padding:10px;">*</button>
+  <button onclick="plus(this)" style="position:absolute; top:43%; left:85.5%; padding:10px;">-</button>
+  <button onclick="plus(this)" style="position:absolute; top:30%; left:85.5%; padding:10px;">/</button>
+  <table style="position:absolute;top:25%; left:0%;">
+    <td>
+     <button onclick="c()">CE</button>
+    </td>
+       <td>
+          <button onclick="c1()"><i class="fas fa-minus-circle"></i></button>
+          </td>
+    <td>
+      <button onclick="plus(this)">%</button>
+          </td>
+    <tr>
+      <td>
+        <button onclick="plus(this)" style=" padding:16px;">9</button>
+      </td>
+      <td>
+        <button onclick="plus(this)" style=" padding:16px;">8</button>
+      </td>
+       <td>
+        <button onclick="plus(this)" style=" padding:16px;">7</button>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        <button onclick="plus(this)" style=" padding:16px;">4</button>
+      </td>
+      <td>
+        <button onclick="plus(this)" style=" padding:16px;">5</button>
+      </td>
+       <td>
+        <button onclick="plus(this)" style=" padding:16px;">6</button>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        <button onclick="plus(this)" style=" padding:16px;">1</button>
+      </td>
+      <td>
+        <button onclick="plus(this)" style=" padding:16px;">2</button>
+      </td>
+       <td>
+        <button onclick="plus(this)" style=" padding:16px;">3</button>
+      </td>
+    </tr>
+    
+        <tr>
+      <td>
+        <button onclick="plus(this)" style=" padding:16px;">.</button>
+      </td>
+      <td>
+        <button onclick="plus(this)" style=" padding:16px;">0</button>
+      </td>
+       <td>
+        <button onclick="plus(this)" style=" padding:16px;">^</button>
+      </td>
+       
+    </tr>
+  </table>
+<script>
+function myFunction() {
+
+
+  var list = document.getElementById("cac").innerText;
+  
+   var s=eval(list)
+   document.getElementById("cac").innerText=s ;
+}
+  function plus(x) {
+
+var t = document.createTextNode(x.innerText);
+  var list = document.getElementById("cac");
+   list.appendChild(t);
+}
+ function c() {
+var list = document.getElementById("cac").innerHTML="0";
+  
+  
+}
+   function c1() {
+var list = document.getElementById("cac").innerHTML;
+var a=  list.substring(0, list.length-1);
+   document.getElementById("cac").innerHTML=a  
+ 
+}
+  
+</script>
+
+</body>
+</html>
